@@ -1,0 +1,229 @@
+/* Index Page Specific Styles */
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-white);
+    padding: 0 1rem;
+    margin-top: 60px;
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-white);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-white);
+}
+
+/* Featured Destinations */
+.featured-destinations {
+    padding: 4rem 5%;
+    background-color: var(--primary-white);
+}
+
+.featured-destinations h2 {
+    text-align: center;
+    color: var(--secondary-blue);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.destination-card {
+    background: var(--primary-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    color: var(--secondary-blue);
+    margin: 1rem;
+}
+
+.destination-card .preview-text {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.destination-card .expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    color: #444;
+    line-height: 1.6;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.destination-card .expanded-content.active {
+    max-height: 1000px;
+    padding: 1rem;
+}
+
+.destination-card .learn-more {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: var(--primary-green);
+    color: var(--primary-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.destination-card .learn-more:hover {
+    background-color: var(--secondary-blue);
+}
+
+.destination-card.expanded {
+    transform: scale(1.02);
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: var(--secondary-golden);
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    color: var(--secondary-blue);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature {
+    padding: 2rem;
+    background-color: var(--primary-white);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-out;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    color: var(--secondary-blue);
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: var(--secondary-blue);
+}
+
+/* Special Offers */
+.special-offers {
+    padding: 5rem 5%;
+    background-color: var(--primary-white);
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.offer-card {
+    background-color: var(--primary-white);
+    border: 2px solid var(--primary-pink);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-card h3 {
+    color: var(--secondary-blue);
+    margin-bottom: 1rem;
+}
+
+.offer-card .price {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* Call to Action */
+.cta-section {
+    background-color: var(--secondary-golden);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--secondary-blue);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+}

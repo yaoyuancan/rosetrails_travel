@@ -3,69 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinations - Wanderlust Travel Agency</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Destinations - Rosetrails Travel Agency</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/destinations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .destinations-grid {
-            padding: 100px 5% 50px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .destination-card {
-            position: relative;
-            height: 400px;
-        }
-
-        .destination-card img {
-            height: 100%;
-        }
-
-        .destination-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            padding: 2rem 1rem;
-        }
-
-        .filter-section {
-            padding: 20px 5%;
-            background: #f9f9f9;
-            margin-top: 60px;
-        }
-
-        .filters {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid #3498db;
-            background: transparent;
-            color: #3498db;
-            cursor: pointer;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background: #3498db;
-            color: white;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <h1>Wanderlust</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Rosetrails Travel Agency Logo">
+                </a>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -82,64 +32,48 @@
     </header>
 
     <section class="filter-section">
-        <h2>Explore Destinations</h2>
-        <div class="filters">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Europe</button>
-            <button class="filter-btn">Asia</button>
-            <button class="filter-btn">Americas</button>
-            <button class="filter-btn">Africa</button>
-            <button class="filter-btn">Oceania</button>
+        <img src="images/destination.jpg" alt="background" class="filter-background">
+        <h2>Explore Alberta</h2>
+        <div class="filter-buttons">
+            <button class="filter-button active" data-filter="all">All Destinations</button>
+            <button class="filter-button" data-filter="mountain">Mountain Views</button>
+            <button class="filter-button" data-filter="culture">Cultural Sites</button>
+            <button class="filter-button" data-filter="nature">Natural Wonders</button>
+            <button class="filter-button" data-filter="urban">Urban Experience</button>
         </div>
     </section>
 
     <main class="destinations-grid">
-        <div class="destination-card" id="paris">
-            <img src="images/paris.jpg" alt="Paris">
+        <div class="destination-card" id="banff">
+            <img src="images/banff1.jpg" alt="Banff">
             <div class="destination-info">
-                <h3>Paris, France</h3>
-                <p>Experience the city of love and lights</p>
-                <a href="tours.html#paris-tours" class="cta-button">View Tours</a>
+                <h3>Banff</h3>
+                <p>Canada's first National Park, featuring majestic mountains, jewel-toned lakes, and year-round outdoor activities. Experience world-class skiing, hiking trails, and the charming Banff townsite nestled in the Canadian Rockies.</p>
+                <a href="tours.html#banff-tours" class="cta-button">View Tours</a>
             </div>
         </div>
-        <div class="destination-card" id="tokyo">
-            <img src="images/tokyo.jpg" alt="Tokyo">
+        <div class="destination-card" id="canmore">
+            <img src="images/canmore1.jpg" alt="Canmore">
             <div class="destination-info">
-                <h3>Tokyo, Japan</h3>
-                <p>Explore the perfect blend of tradition and innovation</p>
-                <a href="tours.html#tokyo-tours" class="cta-button">View Tours</a>
+                <h3>Canmore</h3>
+                <p>A picturesque mountain town with stunning Rocky Mountain views, world-class Nordic Centre, and vibrant arts scene. Enjoy hiking, mountain biking, and a thriving food and brewery culture in this authentic mountain community.</p>
+                <a href="tours.html#canmore-tours" class="cta-button">View Tours</a>
             </div>
         </div>
-        <div class="destination-card" id="santorini">
-            <img src="images/santorini.jpg" alt="Santorini">
+        <div class="destination-card" id="drumheller">
+            <img src="images/drumheller1.jpg" alt="Drumheller">
             <div class="destination-info">
-                <h3>Santorini, Greece</h3>
-                <p>Discover the beauty of the Mediterranean</p>
-                <a href="tours.html#santorini-tours" class="cta-button">View Tours</a>
+                <h3>Drumheller</h3>
+                <p>Known as the Dinosaur Capital of the World, this unique destination in the Canadian Badlands offers fascinating paleontological discoveries, stunning badland formations, and the world-renowned Royal Tyrrell Museum.</p>
+                <a href="tours.html#drumheller-tours" class="cta-button">View Tours</a>
             </div>
         </div>
-        <div class="destination-card">
-            <img src="images/new-york.jpg" alt="New York">
+        <div class="destination-card" id="calgary">
+            <img src="images/calgary.jpg" alt="Calgary">
             <div class="destination-info">
-                <h3>New York, USA</h3>
-                <p>The city that never sleeps</p>
-                <a href="tours.html#new-york-tours" class="cta-button">View Tours</a>
-            </div>
-        </div>
-        <div class="destination-card">
-            <img src="images/bali.jpg" alt="Bali">
-            <div class="destination-info">
-                <h3>Bali, Indonesia</h3>
-                <p>Paradise island with rich culture</p>
-                <a href="tours.html#bali-tours" class="cta-button">View Tours</a>
-            </div>
-        </div>
-        <div class="destination-card">
-            <img src="images/dubai.jpg" alt="Dubai">
-            <div class="destination-info">
-                <h3>Dubai, UAE</h3>
-                <p>Modern luxury meets Arabian culture</p>
-                <a href="tours.html#dubai-tours" class="cta-button">View Tours</a>
+                <h3>Calgary</h3>
+                <p>A dynamic city where urban sophistication meets western hospitality. Home to the famous Calgary Stampede, vibrant cultural scenes, and gateway to the Rocky Mountains, offering world-class dining, shopping, and entertainment.</p>
+                <a href="tours.html#calgary-tours" class="cta-button">View Tours</a>
             </div>
         </div>
     </main>
@@ -148,8 +82,9 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@wanderlust.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> Email: info@rosetrails.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calgary, Alberta, Canada</p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
@@ -168,48 +103,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Wanderlust Travel Agency. All rights reserved.</p>
+            <p>&copy; 2024 Rosetrails Travel Agency. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Destination filtering
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const destinations = document.querySelectorAll('.destination-card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                const region = button.textContent.toLowerCase();
-                
-                if (region === 'all') {
-                    destinations.forEach(dest => dest.style.display = 'block');
-                } else {
-                    destinations.forEach(dest => {
-                        const destinationRegion = getDestinationRegion(dest);
-                        dest.style.display = destinationRegion === region ? 'block' : 'none';
-                    });
-                }
-            });
-        });
-
-        function getDestinationRegion(destinationCard) {
-            const destination = destinationCard.querySelector('h3').textContent;
-            const regions = {
-                'Paris': 'europe',
-                'Santorini': 'europe',
-                'Tokyo': 'asia',
-                'Bali': 'asia',
-                'Dubai': 'asia',
-                'New York': 'americas'
-            };
-            return regions[destination.split(',')[0]] || 'other';
-        }
-    </script>
+    <script src="js/filter.js"></script>
 </body>
 </html>

@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tours - Wanderlust Travel Agency</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Tours - Rosetrails Travel Agency</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tours.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
     <style>
         .tours-container {
             padding: 100px 5% 50px;
@@ -97,27 +99,16 @@
             background-color: #2980b9;
         }
 
-        .filter-bar {
-            background: #f9f9f9;
-            padding: 1rem 5%;
-            margin-top: 80px;
-            position: sticky;
-            top: 60px;
-            z-index: 100;
+        .destination-tours {
+            margin-bottom: 4rem;
         }
 
-        .filter-options {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .filter-select {
-            padding: 0.5rem;
-            border: 1px solid #3498db;
-            border-radius: 5px;
-            min-width: 150px;
+        .destination-tours h2 {
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
         }
     </style>
 </head>
@@ -125,7 +116,9 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <h1>Wanderlust</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Rosetrails Travel Agency Logo">
+                </a>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -136,88 +129,212 @@
                 <li><a href="tours.html" class="active">Tours</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="checkout.html" class="cta-button">Book Now</a></li>
+                <li><a href="checkout.html?source=nav" class="cta-button">Book Now</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="filter-bar">
-        <div class="filter-options">
-            <select class="filter-select" id="duration-filter">
-                <option value="all">Duration (Any)</option>
-                <option value="short">1-3 Days</option>
-                <option value="medium">4-7 Days</option>
-                <option value="long">8+ Days</option>
-            </select>
-            <select class="filter-select" id="price-filter">
-                <option value="all">Price Range (Any)</option>
-                <option value="budget">Budget ($0-$1000)</option>
-                <option value="mid">Mid-Range ($1001-$3000)</option>
-                <option value="luxury">Luxury ($3001+)</option>
-            </select>
-            <select class="filter-select" id="type-filter">
-                <option value="all">Tour Type (Any)</option>
-                <option value="cultural">Cultural</option>
-                <option value="adventure">Adventure</option>
-                <option value="relaxation">Relaxation</option>
-            </select>
-        </div>
-    </div>
-
     <main class="tours-container">
-        <section class="tour-category" id="paris-tours">
-            <h2>Paris Tours</h2>
+        <section class="destination-tours" id="banff-tours">
+            <h2>Banff Tours</h2>
             <div class="tours-grid">
-                <div class="tour-card" data-duration="short" data-price="mid" data-type="cultural">
+                <div class="tour-card">
                     <div class="tour-image">
-                        <img src="images/paris-tour1.jpg" alt="Paris City Tour">
+                        <img src="images/banff-lake-louise.jpg" alt="Lake Louise Tour">
                     </div>
-                    <div class="tour-details">
-                        <h3 class="tour-title">Paris City Explorer</h3>
-                        <div class="tour-info">
-                            <span><i class="far fa-clock"></i> 3 Days</span>
-                            <span><i class="fas fa-user-friends"></i> Max 12 people</span>
+                    <div class="tour-content">
+                        <h3>Lake Louise Adventure</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 8 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 12</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Pickup: Banff Town</span>
+                            </div>
                         </div>
-                        <p class="tour-description">Discover the magic of Paris with guided tours of the Eiffel Tower, Louvre, and Notre-Dame.</p>
-                        <p class="tour-price">From $1,499</p>
-                        <a href="checkout.html?tour=paris-explorer" class="book-now">Book Now</a>
+                        <div class="tour-price">$189 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('lake-louise')">Book Now</a>
                     </div>
                 </div>
-                <!-- Add more Paris tours here -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/banff-yoho.jpg" alt="Yoho National Park">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Yoho National Park</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 4 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 15</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Location: Banff Yoho National Park</span>
+                            </div>
+                        </div>
+                        <div class="tour-price">$149 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('yoho')">Book Now</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="tour-category" id="tokyo-tours">
-            <h2>Tokyo Tours</h2>
+        <section class="destination-tours" id="canmore-tours">
+            <h2>Canmore Tours</h2>
             <div class="tours-grid">
-                <div class="tour-card" data-duration="medium" data-price="luxury" data-type="cultural">
+                <div class="tour-card">
                     <div class="tour-image">
-                        <img src="images/tokyo-tour1.jpg" alt="Tokyo Adventure">
+                        <img src="images/canmore-hiking.jpg" alt="Canmore Hiking">
                     </div>
-                    <div class="tour-details">
-                        <h3 class="tour-title">Tokyo Cultural Experience</h3>
-                        <div class="tour-info">
-                            <span><i class="far fa-clock"></i> 5 Days</span>
-                            <span><i class="fas fa-user-friends"></i> Max 10 people</span>
+                    <div class="tour-content">
+                        <h3>Nordic Centre Trail Adventure</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 6 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 8</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Location: Nordic Centre</span>
+                            </div>
                         </div>
-                        <p class="tour-description">Immerse yourself in Japanese culture with temple visits, tea ceremonies, and sushi workshops.</p>
-                        <p class="tour-price">From $3,299</p>
-                        <a href="checkout.html?tour=tokyo-cultural" class="book-now">Book Now</a>
+                        <div class="tour-price">$129 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('nordic-centre')">Book Now</a>
                     </div>
                 </div>
-                <!-- Add more Tokyo tours here -->
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/canmore-cave.jpg" alt="Cave Tours">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Rat's Nest Cave Explorer</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 6 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 8</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Location: Grotto Mountain</span>
+                            </div>
+                        </div>
+                        <div class="tour-price">$169 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('cave-explorer')">Book Now</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Add more tour categories here -->
+        <section class="destination-tours" id="drumheller-tours">
+            <h2>Drumheller Tours</h2>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/drumheller-museum.jpg" alt="Royal Tyrrell Museum">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Dinosaur Discovery Tour</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 5 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 15</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Location: Royal Tyrrell Museum</span>
+                            </div>
+                        </div>
+                        <div class="tour-price">$99 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('dinosaur')">Book Now</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/drumheller-badlands.jpg" alt="Badlands Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Badlands Adventure</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 7 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 10</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Location: Horseshoe Canyon</span>
+                            </div>
+                        </div>
+                        <div class="tour-price">$139 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('badlands')">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destination-tours" id="calgary-tours">
+            <h2>Calgary Tours</h2>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/calgary-tower.jpg" alt="Calgary City Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>City Highlights Tour</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 4 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 12</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Pickup: Downtown Calgary</span>
+                            </div>
+                        </div>
+                        <div class="tour-price">$79 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('city-highlights')">Book Now</a>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/calgary-food.jpg" alt="Food Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Culinary Adventure</h3>
+                        <div class="tour-details">
+                            <div class="tour-info">
+                                <span><i class="fas fa-clock"></i>Duration: 3 hours</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-users"></i>Group size: Max 8</span>
+                            </div>
+                            <div class="tour-info">
+                                <span><i class="fas fa-map-marker-alt"></i>Location: 17th Avenue</span>
+                            </div>
+                        </div>
+                        <div class="tour-price">$119 per person</div>
+                        <a href="javascript:void(0)" class="book-button" onclick="bookTour('culinary')">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@wanderlust.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> Email: info@rosetrails.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calgary, Alberta, Canada</p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
@@ -236,39 +353,12 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Wanderlust Travel Agency. All rights reserved.</p>
+            <p>&copy; 2024 Rosetrails Travel Agency. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Tour filtering
-        const durationFilter = document.getElementById('duration-filter');
-        const priceFilter = document.getElementById('price-filter');
-        const typeFilter = document.getElementById('type-filter');
-        const tourCards = document.querySelectorAll('.tour-card');
-
-        function filterTours() {
-            const duration = durationFilter.value;
-            const price = priceFilter.value;
-            const type = typeFilter.value;
-
-            tourCards.forEach(card => {
-                const durationMatch = duration === 'all' || card.dataset.duration === duration;
-                const priceMatch = price === 'all' || card.dataset.price === price;
-                const typeMatch = type === 'all' || card.dataset.type === type;
-
-                if (durationMatch && priceMatch && typeMatch) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        durationFilter.addEventListener('change', filterTours);
-        priceFilter.addEventListener('change', filterTours);
-        typeFilter.addEventListener('change', filterTours);
-    </script>
+    <script src="js/destinations.js"></script>
+    <script src="js/booking.js"></script>
 </body>
 </html>

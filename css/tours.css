@@ -1,0 +1,299 @@
+/* Tours Page Specific Styles */
+
+/* Tours Hero */
+.tours-hero {
+    background-color: var(--primary-green);
+    color: var(--primary-white);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* Tour Cards */
+.tour-grid {
+    padding: 4rem 0;
+}
+
+.tour-card {
+    background-color: var(--primary-white);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.tour-content {
+    padding: 1.5rem;
+}
+
+.tour-content h3 {
+    color: var(--secondary-blue);
+    margin-bottom: 1rem;
+}
+
+.tour-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.tour-price {
+    color: var(--secondary-blue);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* Tour Features */
+.tour-features {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.tour-features li {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-blue);
+}
+
+/* Tour Categories */
+.tour-categories {
+    background-color: var(--primary-pink);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background-color: var(--primary-white);
+    color: var(--secondary-blue);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background-color: var(--secondary-blue);
+    color: var(--primary-white);
+}
+
+/* Tour Highlights */
+.tour-highlights {
+    background-color: var(--secondary-golden);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.tour-highlights h4 {
+    color: var(--secondary-blue);
+    margin-bottom: 0.5rem;
+}
+
+/* Book Now Button */
+.book-now-btn {
+    background-color: var(--primary-green);
+    color: var(--primary-white);
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: var(--secondary-blue);
+}
+
+/* Tours Page Styles */
+.tours-header {
+    background: url('../images/tours-bg.jpg') center/cover no-repeat;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    color: var(--primary-white);
+}
+
+.tours-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+}
+
+.tours-header h1 {
+    position: relative;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.tours-header p {
+    position: relative;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Tours Section */
+.tours-container {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.destination-tours {
+    margin-top: 80px;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destination-tours h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.destination-tours:last-child {
+    margin-bottom: 0;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tour-card {
+    background: var(--primary-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.05);
+}
+
+.tour-content {
+    padding: 1.5rem;
+}
+
+.tour-content h3 {
+    color: var(--secondary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tour-details {
+    margin-bottom: 1rem;
+}
+
+.tour-info {
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+
+.tour-info span {
+    display: flex;
+    align-items: center;
+}
+
+.tour-info i {
+    color: var(--primary-green);
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+.tour-price {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.book-button {
+    display: inline-block;
+    background: var(--primary-green);
+    color: var(--primary-white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.book-button:hover {
+    background: var(--secondary-blue);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tours-header {
+        padding: 3rem 0;
+    }
+
+    .tours-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .tours-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .tours-container {
+        padding: 3rem 3%;
+    }
+
+    .destination-tours h2 {
+        font-size: 2rem;
+    }
+
+    .tours-grid {
+        grid-template-columns: 1fr;
+    }
+}

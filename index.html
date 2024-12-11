@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderlust Travel Agency - Your Journey Begins Here</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Rosetrails Travel Agency - Your Journey Begins Here</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <h1>Wanderlust</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Rosetrails Travel Agency Logo">
+                </a>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -22,7 +26,7 @@
                 <li><a href="tours.html">Tours</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="checkout.html" class="cta-button">Book Now</a></li>
+                <li><a href="checkout.html?source=nav" class="cta-button">Book Now</a></li>
             </ul>
         </nav>
     </header>
@@ -40,28 +44,37 @@
             <h2>Popular Destinations</h2>
             <div class="destination-grid">
                 <div class="destination-card">
-                    <img src="images/paris.jpg" alt="Paris">
-                    <h3>Paris, France</h3>
-                    <p>Experience the city of love</p>
-                    <a href="destinations.html#paris" class="learn-more">Learn More</a>
+                    <img src="images/banff.jpg" alt="Banff">
+                    <h3>Banff</h3>
+                    <p class="preview-text">Canada's first National Park offers majestic mountains and vibrant jewel-toned lakes...</p>
+                    <div class="expanded-content">
+                        <p>Canada's first National Park offers majestic mountains, vibrant jewel-toned lakes, and untouched wilderness. This breathtaking scenery invites visitors to enjoy outdoor activities throughout the year. In summer, explore unspoiled forests and paddle across turquoise lakes, while winter invites you to ski down snowy slopes and relax in steaming hot springs. The charming mountain towns of Banff and Lake Louise also provide a warm and welcoming retreat for travelers.</p>
+                    </div>
+                    <button class="learn-more">Learn More</button>
                 </div>
                 <div class="destination-card">
-                    <img src="images/tokyo.jpg" alt="Tokyo">
-                    <h3>Tokyo, Japan</h3>
-                    <p>Explore the bustling metropolis</p>
-                    <a href="destinations.html#tokyo" class="learn-more">Learn More</a>
+                    <img src="images/canmore.jpg" alt="Canmore">
+                    <h3>Canmore</h3>
+                    <p class="preview-text">Nestled among the snow-capped peaks of the Canadian Rockies...</p>
+                    <div class="expanded-content">
+                        <p>Nestled among the snow-capped peaks of the Canadian Rockies and just minutes from Banff National Park's eastern entrance, this historic mining town has earned a reputation as a haven for winter sports enthusiasts, particularly those heading to the cross-country skiing trails at Canmore Nordic Centre Provincial Park. In recent years, Canmore has transformed into a year-round destination, offering warm-weather adventures like hiking, mountain biking, and whitewater rafting. Set along the scenic Bow River, Canmore boasts a walkable downtown brimming with charming boutiques, art galleries, and Canada's most enchanting bookshop. With three breweries, two distilleries, and a vibrant food scene, it has become a culinary hotspot drawing diners from across Alberta.</p>
+                    </div>
+                    <button class="learn-more">Learn More</button>
                 </div>
                 <div class="destination-card">
-                    <img src="images/santorini.jpg" alt="Santorini">
-                    <h3>Santorini, Greece</h3>
-                    <p>Relax in Mediterranean paradise</p>
-                    <a href="destinations.html#santorini" class="learn-more">Learn More</a>
+                    <img src="images/drumheller.jpg" alt="Drumheller">
+                    <h3>Drumheller</h3>
+                    <p class="preview-text">A charming town nestled in the heart of the Canadian Badlands...</p>
+                    <div class="expanded-content">
+                        <p>A charming town nestled in the heart of the Canadian Badlands, Drumheller is famously known as the Dinosaur Capital of the World. It's a must-visit destination for anyone exploring the Badlands and uncovering the prehistoric wonders that once roamed this fascinating region.</p>
+                    </div>
+                    <button class="learn-more">Learn More</button>
                 </div>
             </div>
         </section>
 
         <section class="why-choose-us">
-            <h2>Why Choose Wanderlust?</h2>
+            <h2>Why Choose Rosetrails?</h2>
             <div class="features-grid">
                 <div class="feature">
                     <i class="fas fa-globe"></i>
@@ -86,8 +99,9 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@wanderlust.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> Email: info@rosetrails.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calgary, Alberta, Canada</p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
@@ -106,10 +120,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Wanderlust Travel Agency. All rights reserved.</p>
+            <p>&copy; 2024 Rosetrails Travel Agency. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/destinations.js"></script>
 </body>
 </html>

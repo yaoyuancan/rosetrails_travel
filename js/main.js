@@ -71,6 +71,6 @@ document.querySelectorAll('.destination-card, .feature').forEach(el => {
 document.addEventListener('DOMContentLoaded', () => {
     const yearSpan = document.querySelector('.footer-bottom');
     if (yearSpan) {
-        yearSpan.innerHTML = `<p>&copy; ${new Date().getFullYear()} Wanderlust Travel Agency. All rights reserved.</p>`;
+        yearSpan.innerHTML = `<p>&copy; ${new Date().getFullYear()} Rosetrails Travel Agency. All rights reserved.</p>`;
     }
 });

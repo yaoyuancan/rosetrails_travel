@@ -3,199 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Wanderlust Travel Agency</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>About Us - Rosetrails Travel Agency</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .about-container {
-            padding: 100px 5% 50px;
-        }
-
-        .hero-section {
-            text-align: center;
-            margin-bottom: 4rem;
-            padding: 4rem 0;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                        url('../images/about-hero.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            border-radius: 10px;
-        }
-
-        .hero-section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .story-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .story-content {
-            padding: 2rem;
-        }
-
-        .story-content h2 {
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-        }
-
-        .story-content p {
-            color: #34495e;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .story-image {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 100%;
-            min-height: 300px;
-        }
-
-        .story-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .values-section {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .values-section h2 {
-            color: #2c3e50;
-            margin-bottom: 3rem;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .value-card {
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .value-card i {
-            font-size: 2.5rem;
-            color: #3498db;
-            margin-bottom: 1rem;
-        }
-
-        .value-card h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .value-card p {
-            color: #7f8c8d;
-        }
-
-        .team-section {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .team-section h2 {
-            color: #2c3e50;
-            margin-bottom: 3rem;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .team-member {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-        }
-
-        .member-image {
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .member-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .member-info {
-            padding: 1.5rem;
-        }
-
-        .member-info h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .member-info p {
-            color: #7f8c8d;
-            margin-bottom: 1rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: #3498db;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #2980b9;
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 2rem 1rem;
-            }
-
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-
-            .story-section {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <h1>Wanderlust</h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Rosetrails Travel Agency Logo">
+                </a>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -220,12 +40,14 @@
         <section class="story-section">
             <div class="story-content">
                 <h2>Who We Are</h2>
-                <p>Wanderlust Travel Agency was founded with a simple yet powerful vision: to make extraordinary travel experiences accessible to everyone. What started as a small team of passionate travelers has grown into a global community of adventure seekers and cultural enthusiasts.</p>
-                <p>Our journey began when our founders, seasoned travelers themselves, recognized the need for a travel agency that could combine the authenticity of local experiences with the comfort and reliability of professional travel services.</p>
-                <p>Today, we're proud to have helped thousands of travelers explore the world, create lasting memories, and discover the transformative power of travel.</p>
+                <p>Welcome to Rosetrails, where every journey begins with a story and ends with unforgettable memories.</p>
+                <p>Nestled in the heart of Calgary, Canada, Rosetrails takes its inspiration from the wild roses that grace Alberta's landscape, symbolizing natural beauty, exploration, and growth. Like the trails that wind through Calgary and beyond, we guide you on paths filled with discovery, wonder, and authentic connections to the world around you.</p>
+                <p>Whether you're exploring Calgary's dynamic blend of history and modern charm or venturing into the majestic landscapes of Banff, Kananaskis Country, and the Canadian Rockies, Rosetrails promises journeys that are as unique as the travelers who embark on them.</p>
+                <p>At Rosetrails, we believe travel is more than reaching a destination—it's about embracing the stories along the way. With personalized itineraries, expert local guides, and a passion for creating unforgettable experiences, we're here to ensure every step of your adventure is steeped in the magic of Alberta.</p>
+                <p>Discover the untamed beauty of Calgary. Follow the Rosetrails to your next great adventure.</p>
             </div>
             <div class="story-image">
-                <img src="images/about-story.jpg" alt="Our Story">
+                <img src="images/about-story.png" alt="Our Story">
             </div>
         </section>
 
@@ -260,7 +82,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="images/team1.jpg" alt="Sarah Johnson">
+                        <img src="images/team1.png" alt="Sarah Johnson">
                     </div>
                     <div class="member-info">
                         <h3>Sarah Johnson</h3>
@@ -273,10 +95,10 @@
                 </div>
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="images/team2.jpg" alt="Michael Chen">
+                        <img src="images/team2.jpg" alt="Michael Washington">
                     </div>
                     <div class="member-info">
-                        <h3>Michael Chen</h3>
+                        <h3>Michael Washington</h3>
                         <p>Head of Operations</p>
                         <div class="social-links">
                             <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -286,7 +108,7 @@
                 </div>
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="images/team3.jpg" alt="Emma Rodriguez">
+                        <img src="images/team3.png" alt="Emma Rodriguez">
                     </div>
                     <div class="member-info">
                         <h3>Emma Rodriguez</h3>
@@ -305,8 +127,9 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@wanderlust.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> Email: info@rosetrails.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Calgary, Alberta, Canada</p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
@@ -325,7 +148,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Wanderlust Travel Agency. All rights reserved.</p>
+            <p>&copy; 2024 Rosetrails Travel Agency. All rights reserved.</p>
         </div>
     </footer>
 
